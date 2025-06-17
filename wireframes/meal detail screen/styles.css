@@ -1,0 +1,310 @@
+:root {
+    /* Dark mode colors by default */
+    --bg-color: #121212;
+    --app-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --section-bg-color: #2d2d2d;
+    --border-color: #444444;
+    --nav-bg-color: #2d2d2d;
+    --icon-bg-color: #444444;
+    --button-bg-color: #444444;
+    --button-text-color: #e0e0e0;
+    --accent-color: #4a4a4a;
+    --badge-bg-color: rgba(80, 80, 80, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+    max-width: 480px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--app-bg-color);
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--nav-bg-color);
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Language Selector */
+.language-selector {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.lang-toggle {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.canteen-status, .opening-hours {
+    background-color: var(--section-bg-color);
+    padding: 10px;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    width: 48%;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+/* Back Button */
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+}
+
+.back-icon {
+    font-size: 18px;
+}
+
+/* Meal Detail Styles */
+.meal-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meal-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.meal-image-placeholder {
+    width: 280px;
+    height: 180px;
+    background-color: var(--section-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.meal-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.meal-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.badge {
+    background-color: var(--badge-bg-color);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+.vegan-badge, .vegetarian-badge, .organic-badge, .local-badge {
+    border: 1px dashed var(--border-color);
+}
+
+/* Detail Sections */
+.detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.detail-section h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.detail-box {
+    background-color: var(--section-bg-color);
+    padding: 12px;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+}
+
+/* CO2 Footprint */
+.co2-footprint {
+    background-color: rgba(68, 68, 68, 0.5);
+    padding: 3px 6px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.co2-icon {
+    font-size: 14px;
+}
+
+.co2-rating {
+    margin-left: auto;
+    padding: 2px 6px;
+    background-color: var(--section-bg-color);
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Nutrition Information */
+.nutrition {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.nutrition-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nutrition-label {
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pre-order-button, .bring-container-button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px dashed var(--border-color);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    background-color: var(--nav-bg-color);
+    padding: 10px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.bottom-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+}
+
+.nav-icon {
+    background-color: var(--icon-bg-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    border: 1px dashed var(--border-color);
+}
+
+.nav-label {
+    font-size: 12px;
+}
+
+.nav-item.active .nav-icon {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.nav-item.active .nav-label {
+    font-weight: bold;
+}
+
+/* iOS-style scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-height: 600px) {
+    .meal-image-placeholder {
+        height: 140px;
+    }
+}
+
+/* Dark mode is set as default */

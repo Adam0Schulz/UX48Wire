@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen App - Pre-order Screen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="language-selector">
+                <button class="lang-toggle" aria-label="Switch language">EN | DA</button>
+            </div>
+            <div class="status-container">
+                <div class="canteen-status">
+                    <p>Canteen Status: [Status]</p>
+                </div>
+                <div class="opening-hours">
+                    <p>Opening Hours: [Hours]</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Back Button -->
+            <div class="back-button">
+                <span class="back-icon">←</span> Back to Meal
+            </div>
+            
+            <!-- Pre-order Form -->
+            <section class="preorder-form">
+                <div class="meal-preview">
+                    <div class="meal-image-placeholder">[Meal Image]</div>
+                    <div class="meal-info">
+                        <h1 class="meal-title">[Meal Name]</h1>
+                        <div class="meal-badges">
+                            <span class="badge">[Dietary Type]</span>
+                        </div>
+                        <div class="meal-price">[Price]</div>
+                    </div>
+                </div>
+                
+                <!-- Portion Size Selection -->
+                <div class="option-section">
+                    <h2>Portion Size</h2>
+                    <div class="option-group">
+                        <div class="option-item">
+                            <input type="radio" id="portion1" name="portion" value="portion1">
+                            <label for="portion1">
+                                <span class="option-name">[Portion Option 1]</span>
+                                <span class="option-price">[Price 1]</span>
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="portion2" name="portion" value="portion2" checked>
+                            <label for="portion2">
+                                <span class="option-name">[Portion Option 2]</span>
+                                <span class="option-price">[Price 2]</span>
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="portion3" name="portion" value="portion3">
+                            <label for="portion3">
+                                <span class="option-name">[Portion Option 3]</span>
+                                <span class="option-price">[Price 3]</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Container Options -->
+                <div class="option-section">
+                    <h2>Serving Option</h2>
+                    <div class="option-group">
+                        <div class="option-item">
+                            <input type="radio" id="container1" name="container" value="container1" checked>
+                            <label for="container1">
+                                <span class="option-name">[Container Option 1]</span>
+                                <span class="option-description">[Description 1]</span>
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="container2" name="container" value="container2">
+                            <label for="container2">
+                                <span class="option-name">[Container Option 2]</span>
+                                <span class="option-description">[Description 2]</span>
+                                <span class="eco-badge">[Eco]</span>
+                            </label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" id="container3" name="container" value="container3">
+                            <label for="container3">
+                                <span class="option-name">[Container Option 3]</span>
+                                <span class="option-description">[Additional Fee]</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Special Instructions -->
+                <div class="option-section">
+                    <h2>Special Instructions (Optional)</h2>
+                    <textarea class="special-instructions" placeholder="Add any special instructions here..."></textarea>
+                </div>
+                
+                <!-- Pickup Time -->
+                <div class="option-section">
+                    <h2>Pickup Time</h2>
+                    <div class="time-selector">
+                        <select class="time-dropdown">
+                            <option value="time1">[Time Option 1]</option>
+                            <option value="time2">[Time Option 2]</option>
+                            <option value="time3" selected>[Time Option 3]</option>
+                            <option value="time4">[Time Option 4]</option>
+                            <option value="time5">[Time Option 5]</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Submit Button -->
+                <button class="submit-button">Confirm Pre-order</button>
+            </section>
+        </main>
+        
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <ul>
+                <li class="nav-item">
+                    <div class="nav-icon">P</div>
+                    <div class="nav-label">Profile</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">O</div>
+                    <div class="nav-label">Order</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">M</div>
+                    <div class="nav-label">Menu</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">H</div>
+                    <div class="nav-label">Home</div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

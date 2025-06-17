@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen App - Confirmation Screen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="language-selector">
+                <button class="lang-toggle" aria-label="Switch language">EN | DA</button>
+            </div>
+            <div class="status-container">
+                <div class="canteen-status">
+                    <p>Canteen Status: [Status]</p>
+                </div>
+                <div class="opening-hours">
+                    <p>Opening Hours: [Hours]</p>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="confirmation-container">
+                <!-- Checkmark Icon Placeholder -->
+                <div class="checkmark-placeholder">
+                    <div class="checkmark-circle">
+                        <div class="checkmark-symbol">[Checkmark Icon]</div>
+                    </div>
+                </div>
+                
+                <!-- Confirmation Message -->
+                <div class="confirmation-message">
+                    <h1>[Confirmation Title]</h1>
+                    <p>[Confirmation Message]</p>
+                    <p class="confirmation-details">[Order Details]</p>
+                    <p class="confirmation-id">[Order ID: #12345]</p>
+                    <p class="confirmation-time">[Date and Time]</p>
+                </div>
+                
+                <!-- Back to Home Button -->
+                <button class="home-button">Back to Home</button>
+                
+                <!-- Order Details Summary -->
+                <div class="order-summary">
+                    <h2>[Order Summary]</h2>
+                    <div class="summary-item">
+                        <span class="summary-label">[Meal]:</span>
+                        <span class="summary-value">[Meal Name]</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">[Portion]:</span>
+                        <span class="summary-value">[Portion Option]</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">[Container]:</span>
+                        <span class="summary-value">[Container Option]</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">[Pickup Time]:</span>
+                        <span class="summary-value">[Time]</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <ul>
+                <li class="nav-item">
+                    <div class="nav-icon">P</div>
+                    <div class="nav-label">Profile</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">O</div>
+                    <div class="nav-label">Order</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">M</div>
+                    <div class="nav-label">Menu</div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav-icon">H</div>
+                    <div class="nav-label">Home</div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
