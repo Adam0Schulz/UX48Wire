@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen App - Confirmation Screen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Top Bar -->
         <header class="top-bar">
             <div class="status-container">
-                <div class="canteen-status">
-                    <p>[Status]</p>
+                <div class="canteen-status closed">
+                    <div class="status-dot"></div>
+                    <p>Canteen: <span>Closed</span></p>
                 </div>
                 <div class="opening-hours">
-                    <p>[Hours]</p>
+                    <div class="hours-icon"><i class="far fa-clock"></i></div>
+                    <p><span>8:00 - 18:00</span></p>
                 </div>
                 <div class="language-selector">
-                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        EN/DA
+                    </button>
                 </div>
             </div>
         </header>
@@ -26,43 +31,45 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="confirmation-container">
-                <!-- Checkmark Icon Placeholder -->
+                <!-- Checkmark Icon -->
                 <div class="checkmark-placeholder">
                     <div class="checkmark-circle">
-                        <div class="checkmark-symbol">[Checkmark Icon]</div>
+                        <div class="checkmark-symbol"><i class="fas fa-check"></i></div>
                     </div>
                 </div>
                 
                 <!-- Confirmation Message -->
                 <div class="confirmation-message">
-                    <h1>[Confirmation Title]</h1>
-                    <p>[Confirmation Message]</p>
-                    <p class="confirmation-details">[Order Details]</p>
-                    <p class="confirmation-id">[Order ID: #12345]</p>
-                    <p class="confirmation-time">[Date and Time]</p>
+                    <h1>Order Confirmed!</h1>
+                    <p>Your pre-order has been successfully placed.</p>
+                    <p class="confirmation-id">Order ID: #12345</p>                    <p class="confirmation-time">June 18, 2025 - 12:30</p>
                 </div>
                 
                 <!-- Back to Home Button -->
-                <button class="home-button">Back to Home</button>
+                <button class="home-button primary-button">Back to Home</button>
                 
                 <!-- Order Details Summary -->
                 <div class="order-summary">
-                    <h2>[Order Summary]</h2>
+                    <h2>Order Summary</h2>
                     <div class="summary-item">
-                        <span class="summary-label">[Meal]:</span>
-                        <span class="summary-value">[Meal Name]</span>
+                        <span class="summary-label">Meal:</span>
+                        <span class="summary-value">Quinoa Buddha Bowl</span>
                     </div>
                     <div class="summary-item">
-                        <span class="summary-label">[Portion]:</span>
-                        <span class="summary-value">[Portion Option]</span>
+                        <span class="summary-label">Portion:</span>
+                        <span class="summary-value">Regular (500g)</span>
                     </div>
                     <div class="summary-item">
-                        <span class="summary-label">[Container]:</span>
-                        <span class="summary-value">[Container Option]</span>
+                        <span class="summary-label">Serving:</span>
+                        <span class="summary-value">Eat in (plate)</span>
                     </div>
                     <div class="summary-item">
-                        <span class="summary-label">[Pickup Time]:</span>
-                        <span class="summary-value">[Time]</span>
+                        <span class="summary-label">Pickup Time:</span>
+                        <span class="summary-value">12:30</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span class="summary-label">Total:</span>
+                        <span class="summary-value">45 DKK</span>
                     </div>
                 </div>
             </div>
@@ -77,19 +84,19 @@
         <nav class="bottom-nav">
             <ul>
                 <li class="nav-item">
-                    <div class="nav-icon">P</div>
+                    <div class="nav-icon"><i class="fas fa-user"></i></div>
                     <div class="nav-label">Profile</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">O</div>
+                    <div class="nav-icon"><i class="fas fa-receipt"></i></div>
                     <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">M</div>
+                    <div class="nav-icon"><i class="fas fa-utensils"></i></div>
                     <div class="nav-label">Menu</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">H</div>
+                    <div class="nav-icon"><i class="fas fa-home"></i></div>
                     <div class="nav-label">Home</div>
                 </li>
             </ul>

@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canteen App Wireframe</title>
+    <title>Campus Canteen - Updated</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Top Bar -->
         <header class="top-bar">
             <div class="status-container">
-                <div class="canteen-status">
-                    <p>Canteen Status: [Status]</p>
+                <div class="canteen-status closed">
+                    <div class="status-dot"></div>
+                    <p>Canteen: <span>Closed</span></p>
                 </div>
                 <div class="opening-hours">
-                    <p>Opening Hours: [Hours]</p>
+                    <div class="hours-icon"><i class="far fa-clock"></i></div>
+                    <p><span>8:00 - 18:00</span></p>
                 </div>
                 <div class="language-selector">
-                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        EN/DA
+                    </button>
                 </div>
             </div>
         </header>
@@ -30,53 +35,41 @@
                 <h2>Today's Menu</h2>
                 <div class="menu-items">
                     <!-- Vegan Option (First) -->
-                    <div class="menu-item vegan">
-                        <div class="meal-header">
-                            <div>
-                                <h3>Vegan Meal Name</h3>
-                                <div class="meal-badges">
-                                    <span class="badge vegan-badge">Vegan</span>
-                                    <span class="badge organic-badge">Organic</span>
-                                </div>
-                            </div>
-                            <div class="co2-footprint">
-                                <span class="co2-icon">[CO2]</span>
-                                <span class="co2-value">0.3 kg CO₂</span>
-                            </div>
+                    <div class="meal-card">
+                        <h3>Quinoa Buddha Bowl</h3>
+                        <div class="meal-tags">
+                            <span class="meal-tag vegan">Vegan</span>
+                            <span class="meal-tag organic">Organic</span>
+                        </div>
+                        <div class="co2-indicator">
+                            <span class="co2-label"><i class="fas fa-seedling"></i></span>
+                            <span class="co2-value">0.3 kg CO<sub>2</sub></span>
                         </div>
                     </div>
                     
                     <!-- Vegetarian Option -->
-                    <div class="menu-item vegetarian">
-                        <div class="meal-header">
-                            <div>
-                                <h3>Vegetarian Meal Name</h3>
-                                <div class="meal-badges">
-                                    <span class="badge vegetarian-badge">Vegetarian</span>
-                                    <span class="badge organic-badge">Organic</span>
-                                </div>
-                            </div>
-                            <div class="co2-footprint">
-                                <span class="co2-icon">[CO2]</span>
-                                <span class="co2-value">0.4 kg CO₂</span>
-                            </div>
+                    <div class="meal-card">
+                        <h3>Spinach & Feta Pasta</h3>
+                        <div class="meal-tags">
+                            <span class="meal-tag vegetarian">Vegetarian</span>
+                            <span class="meal-tag organic">Organic</span>
+                        </div>
+                        <div class="co2-indicator">
+                            <span class="co2-label"><i class="fas fa-seedling"></i></span>
+                            <span class="co2-value">0.4 kg CO<sub>2</sub></span>
                         </div>
                     </div>
                     
                     <!-- Meat Option -->
-                    <div class="menu-item meat">
-                        <div class="meal-header">
-                            <div>
-                                <h3>Meat Meal Name</h3>
-                                <div class="meal-badges">
-                                    <span class="badge meat-badge">Meat</span>
-                                    <span class="badge local-badge">Local</span>
-                                </div>
-                            </div>
-                            <div class="co2-footprint">
-                                <span class="co2-icon">[CO2]</span>
-                                <span class="co2-value">1.2 kg CO₂</span>
-                            </div>
+                    <div class="meal-card">
+                        <h3>Beef Stroganoff</h3>
+                        <div class="meal-tags">
+                            <span class="meal-tag meat">Meat</span>
+                            <span class="meal-tag local">Local</span>
+                        </div>
+                        <div class="co2-indicator">
+                            <span class="co2-label"><i class="fas fa-seedling"></i></span>
+                            <span class="co2-value">1.2 kg CO<sub>2</sub></span>
                         </div>
                     </div>
                 </div>
@@ -84,7 +77,7 @@
 
             <!-- Weekly Menu Button -->
             <div class="weekly-menu-button">
-                <button>Check Weekly Menu</button>
+                <button><i class="fas fa-calendar-week"></i> Check Weekly Menu</button>
             </div>
 
             <!-- Pre-order Status -->
@@ -111,8 +104,8 @@
                     </div>
                     
                     <div class="preorder-actions">
-                        <button class="action-button pickup">Confirm Pickup</button>
-                        <button class="action-button cancel">Cancel Order</button>
+                        <button class="action-button pickup"><i class="fas fa-check-circle"></i> Confirm Pickup</button>
+                        <button class="action-button cancel"><i class="fas fa-times-circle"></i> Cancel Order</button>
                     </div>
                     
                     <!-- Stats moved to profile screen - keep for high-res design later
@@ -140,19 +133,19 @@
         <nav class="bottom-nav">
             <ul>
                 <li class="nav-item">
-                    <div class="nav-icon">P</div>
+                    <div class="nav-icon"><i class="fas fa-user"></i></div>
                     <div class="nav-label">Profile</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">O</div>
+                    <div class="nav-icon"><i class="fas fa-receipt"></i></div>
                     <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">M</div>
+                    <div class="nav-icon"><i class="fas fa-utensils"></i></div>
                     <div class="nav-label">Menu</div>
                 </li>
                 <li class="nav-item active">
-                    <div class="nav-icon">H</div>
+                    <div class="nav-icon"><i class="fas fa-home"></i></div>
                     <div class="nav-label">Home</div>
                 </li>
             </ul>

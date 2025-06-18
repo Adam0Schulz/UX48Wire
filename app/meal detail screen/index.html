@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meal Detail - Canteen App Wireframe</title>
+    <title>Meal Detail - Campus Canteen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Top Bar -->
         <header class="top-bar">
             <div class="status-container">
-                <div class="canteen-status">
-                    <p>Canteen Status: [Status]</p>
+                <div class="canteen-status closed">
+                    <div class="status-dot"></div>
+                    <p>Canteen: <span>Closed</span></p>
                 </div>
                 <div class="opening-hours">
-                    <p>Opening Hours: [Hours]</p>
+                    <div class="hours-icon"><i class="far fa-clock"></i></div>
+                    <p><span>8:00 - 18:00</span></p>
                 </div>
                 <div class="language-selector">
-                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        EN/DA
+                    </button>
                 </div>
             </div>
         </header>
@@ -32,16 +37,14 @@
             
             <!-- Meal Detail Section -->
             <section class="meal-detail">
-                <!-- Meal Image Placeholder -->
+                <!-- Meal Image -->
                 <div class="meal-image-container">
-                    <div class="meal-image-placeholder">
-                        [Meal Image]
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Quinoa Buddha Bowl" class="meal-image">
                 </div>
                 
                 <!-- Meal Title and Badges -->
                 <div class="meal-header">
-                    <h1 class="meal-title">[Meal Name]</h1>
+                    <h1 class="meal-title">Quinoa Buddha Bowl</h1>
                     <div class="meal-badges">
                         <span class="badge vegan-badge">Vegan</span>
                         <span class="badge organic-badge">Organic</span>
@@ -53,7 +56,7 @@
                 <div class="detail-section">
                     <h2>Environmental Impact</h2>
                     <div class="co2-footprint detail-box">
-                        <span class="co2-icon">[CO2]</span>
+                        <span class="co2-icon"><i class="fas fa-seedling"></i></span>
                         <span class="co2-value">0.3 kg CO₂</span>
                         <span class="co2-rating">Low Impact</span>
                     </div>
@@ -63,7 +66,7 @@
                 <div class="detail-section">
                     <h2>Ingredients</h2>
                     <div class="ingredients detail-box">
-                        <p>[List of ingredients]</p>
+                        <p>Organic quinoa, roasted sweet potatoes, chickpeas, avocado, kale, red cabbage, edamame beans, cherry tomatoes, tahini dressing (sesame paste, lemon juice, olive oil, garlic), pumpkin seeds, hemp seeds</p>
                     </div>
                 </div>
                 
@@ -71,7 +74,7 @@
                 <div class="detail-section">
                     <h2>Allergens</h2>
                     <div class="allergens detail-box">
-                        <span class="allergen">None</span>
+                        <p>Sesame, Soy</p>
                     </div>
                 </div>
                 
@@ -79,7 +82,7 @@
                 
                 <!-- Pre-order Button -->
                 <div class="action-buttons">
-                    <button class="pre-order-button">Pre-order for Today</button>
+                    <button class="pre-order-button primary-button">Pre-order</button>
                 </div>
             </section>
         </main>
@@ -93,19 +96,19 @@
         <nav class="bottom-nav">
             <ul>
                 <li class="nav-item">
-                    <div class="nav-icon">P</div>
+                    <div class="nav-icon"><i class="fas fa-user"></i></div>
                     <div class="nav-label">Profile</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">O</div>
+                    <div class="nav-icon"><i class="fas fa-receipt"></i></div>
                     <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">M</div>
+                    <div class="nav-icon"><i class="fas fa-utensils"></i></div>
                     <div class="nav-label">Menu</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">H</div>
+                    <div class="nav-icon"><i class="fas fa-home"></i></div>
                     <div class="nav-label">Home</div>
                 </li>
             </ul>

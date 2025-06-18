@@ -11,6 +11,8 @@
     --button-text-color: #e0e0e0;
     --accent-color: #4a4a4a;
     --badge-bg-color: rgba(80, 80, 80, 0.6);
+    --primary-color: #66BB6A; /* Primary green color */
+    --primary-color-hover: #81C784; /* Lighter green for hover */
 }
 
 * {
@@ -28,13 +30,14 @@ body {
 
 .app-container {
     max-width: 480px;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     background-color: var(--app-bg-color);
     position: relative;
     border: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 /* Top Bar */
@@ -53,13 +56,59 @@ body {
 
 .canteen-status, .opening-hours {
     background-color: var(--section-bg-color);
-    padding: 5px 8px;
-    border: 1px dashed var(--border-color);
-    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     font-size: 12px;
-    text-align: center;
+    display: flex;
+    align-items: center;
     flex: 1;
-    margin-right: 5px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.canteen-status p, .opening-hours p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.canteen-status span, .opening-hours span {
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.canteen-status.open .status-dot {
+    background-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+.canteen-status.closed .status-dot {
+    background-color: #F44336;
+    box-shadow: 0 0 5px #F44336;
+}
+
+.canteen-status.open span {
+    color: #4CAF50;
+}
+
+.canteen-status.closed span {
+    color: #F44336;
+}
+
+.hours-icon {
+    color: #64B5F6;
+    margin-right: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .language-selector {
@@ -68,14 +117,26 @@ body {
 }
 
 .lang-toggle {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 5px 8px;
-    font-size: 12px;
+    background-color: var(--primary-color);
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.lang-toggle:hover {
+    background-color: var(--primary-color-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Main Content */
@@ -86,6 +147,7 @@ body {
     padding: 15px;
     justify-content: space-between;
     overflow-y: auto;
+    height: 0; /* This forces the flex item to respect the overflow */
 }
 
 /* Back Button */
@@ -118,17 +180,18 @@ body {
     margin-bottom: 10px;
 }
 
-.meal-image-placeholder {
-    width: 280px;
-    height: 180px;
-    background-color: var(--section-bg-color);
+.meal-image-container {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    border: 1px dashed var(--border-color);
+}
+
+.meal-image {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    color: var(--text-color);
-    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
 .meal-header {
@@ -150,14 +213,35 @@ body {
 }
 
 .badge {
-    background-color: var(--badge-bg-color);
+    font-size: 11px;
     padding: 3px 8px;
     border-radius: 12px;
-    font-size: 12px;
+    font-weight: 600;
 }
 
-.vegan-badge, .vegetarian-badge, .organic-badge, .local-badge {
-    border: 1px dashed var(--border-color);
+.vegan-badge {
+    background-color: #388E3C;
+    color: white;
+}
+
+.vegetarian-badge {
+    background-color: #689F38;
+    color: white;
+}
+
+.meat-badge {
+    background-color: #D32F2F;
+    color: white;
+}
+
+.organic-badge {
+    background-color: #00897B;
+    color: white;
+}
+
+.local-badge {
+    background-color: #1976D2;
+    color: white;
 }
 
 /* Detail Sections */
@@ -190,7 +274,9 @@ body {
 }
 
 .co2-icon {
-    font-size: 14px;
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 18px;
 }
 
 .co2-rating {
@@ -230,13 +316,17 @@ body {
 .pre-order-button, .bring-container-button {
     padding: 12px;
     border: none;
-    border-radius: 4px;
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
-    border: 1px dashed var(--border-color);
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: #000000;
+    font-weight: 600;
+    border: none;
 }
 
 /* Feedback Button */
@@ -298,8 +388,9 @@ body {
 }
 
 .nav-item.active .nav-icon {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--primary-color);
+    color: #000000;
+    border: none;
 }
 
 .nav-item.active .nav-label {

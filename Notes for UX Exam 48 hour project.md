@@ -61,28 +61,7 @@ Use a structured UX process to design your prototype. As a minimum, your process
 - Support your decisions using the literature list and the UX compendium.
 - Sustainability and inclusion must be central to your design choices.
 
-Signe Holm – Conscious Communication Student 
-Age:	23	|	Location:	Lyngby	|	BA	Student	in	Communication	| Single,	lives	in	a	shared	apartment	
-Bio:	Signe	is	a	communication	student	in	her	final	year	at	Cphbusiness.	She’s	vegan,	interested	in	climate	
-activism,	and	part	of	the	student	sustainability	committee.	She	often	brings	her	own	reusable	containers	but	
-finds	it	difficult	to	plan	lunch	around	the	unpredictable	canteen	menu.	She	wants	digital	tools	to	support	
-sustainable	and	inclusive	choices.	
-Motivation:	
-• She wants the canteen to make sustainable options more visible and accessible. 
-• She wants transparency around food waste, ingredients, and CO₂ impact. 
-Pains:		
-• The	canteen	menu	is	not	available	in	advance	or	lacks	detail.	
-• Sustainable	packaging	options	are	not	clearly	supported	or	incentivized.	
-• She	often	experiences	frustration	with	unclear	portion	sizes	and	lack	of	allergen	filtering.	
-User	Stories:	
-• As	a	student,	I	want	to	see	the	vegetarian	and	vegan	options	first,	so	I	can	make	an	eco-friendly	choice	
-easily.	
-• As	a	sustainability	advocate,	I	want	to	know	which	meals	are	produced	with	local	or	organic	
-ingredients.	
-• As	a	climate-conscious	user,	I	want	to	get	a	CO₂	label	per	meal,	so	I	can	compare	footprint.	
-• As	a	student,	I	want	to	pre-order	lunch	in	reusable	packaging,	so	I	reduce	single-use	waste.	
-• As	a	student,	I	want	to	send	suggestions	or	feedback	if	I	see	unnecessary	waste	or	packaging.
-
+Signe Holm – Conscious Communication Student Age: 23 | Location: Lyngby | BA Student in Communication | Single, lives in a shared apartment Bio: Signe is a communication student in her final year at Cphbusiness. She’s vegan, interested in climate activism, and part of the student sustainability committee. She often brings her own reusable containers but finds it difficult to plan lunch around the unpredictable canteen menu. She wants digital tools to support sustainable and inclusive choices. Motivation: • She wants the canteen to make sustainable options more visible and accessible. • She wants transparency around food waste, ingredients, and CO₂ impact. Pains: • The canteen menu is not available in advance or lacks detail. • Sustainable packaging options are not clearly supported or incentivized. • She often experiences frustration with unclear portion sizes and lack of allergen filtering. User Stories: • As a student, I want to see the vegetarian and vegan options first, so I can make an eco-friendly choice easily. • As a sustainability advocate, I want to know which meals are produced with local or organic ingredients. • As a climate-conscious user, I want to get a CO₂ label per meal, so I can compare footprint. • As a student, I want to pre-order lunch in reusable packaging, so I reduce single-use waste. • As a student, I want to send suggestions or feedback if I see unnecessary waste or packaging.
 # My Notes
 
 ## braindump
@@ -451,3 +430,127 @@ User **scrolls or taps** to view full meal details (ingredients, allergens, CO�
 User **selects a meal** → proceeds to **pre-order or favorite/save it**
 
 #### **End**
+
+
+# User testing
+## Raw notes
+
+**Danny**
+- **Task 1 - "You want to pre-order a lunch that’s either vegetarian or vegan. Show me how you would do that."**
+	- i see the todays menu
+	- oh i can check the weekly menu nice
+	- i see i already have a preorder, hmm that is weird (related to it being a wireframe)
+	- i will go to the weekly menu
+	- i will choose this Tuesday
+	- i will go to this vegetarian meal
+	- i will do the preorder for today
+	- i see the portion options
+	- i will go with 3
+	- serving options
+	- special instructions - i don't want chili
+	- confirm preorder
+	- okay i think i did it
+	- i see that there is a order history 
+	- where I can check my order (related to it being a wireframe)
+
+- feedback
+	- for danny (preference) - home on the left
+	- home page feels a bit crowded but it's not too bad once you know how to use it but i felt like it's a lot of options (in the wireframe it's confusing)
+	- i would be nicer to see all the menus and maybe not the pre-order status or make it smaller (you have to scroll down to see all the todays options)
+	- i like that you did the navigation at the bottom
+	- it's nice to immediatly preorder a meal from details
+	- status and hours could take up a bit less space (in row with the language switch)
+	
+- **Task 2 - "You’re allergic to peanuts and dairy. Show me how you’d tell the app so it warns you when meals contain those"**
+	- i would by default think it is in the profile page
+	- and i see the username and my impact on the environment
+	- i see my dietary preferences
+	- and there are the allergens
+	- and I choose the first one
+	- oh i would delete it
+	- an x would be nice in there
+	- there is the add button
+	- that's how I would add it
+	- nice
+
+
+**Kornelia**
+- **Task 1 - "You want to pre-order a lunch that’s either vegetarian or vegan. Show me how you would do that."**
+	- okay so i need to preorder a meal
+	- so I'm looking at the menu
+	- and I choose the vegetarian meal
+	- I click on the preorder
+	- what does this mean? choose container? interesting
+	- okay those are the option I would like 
+	- I click on the order button 
+	- okay i get a confirmation. cool I guess I'm done right?
+
+- popups are a bit much
+- a quick line of instruction on the weekly menu to know whats up
+- for the future: order multiple at once???
+
+
+**Mie**
+- **Task 1 - "You want to pre-order a lunch that’s either vegetarian or vegan. Show me how you would do that."**
+	- why is there already a pre-order (related to it being a wireframe)
+	- i go to the order on the bottom
+	- i don't understand. I go to order and it just shows history so that doesn't make sense
+	- where am I supposed to go? to the menu?
+	- oh okay i choose a from the menu and then I can preorder it
+	- okay so i click on the order button
+	- i see get some choices now
+	- okay let's order it
+	- it shows me the confirmation. cool i guess i just ordered that
+
+- **Task 2 - "You’re allergic to peanuts and dairy. Show me how you’d tell the app so it warns you when meals contain those"**
+	- I would go to profile because it makes sense for it to be there
+	- and then I'll just click on the allergen that I want to add
+	- oh it's deleting it 
+	- there should be an x for me to understand that that removes it
+	- i thought that the allergens there are the selection
+	- oh there is an add button
+	- okay now I get it
+
+- order doesn't make sense because it souds like i should go ther when you want me to order
+
+
+- **Task 3 - "You noticed the canteen used plastic packaging unnecessarily. How would you let them know?"**
+	- i would assume it's under profile
+	- i would go home because i don't see where could like comment or something
+	- under order maybe?
+	- oh there it is in the profile section I just could see it before because I didn't know that I should scroll (that there was more)
+
+- i would put the feedback button under a category of help in the navigation bar
+- submit feedback on what
+- maybe it should be on a past meal
+- why don't you record the whole user test? to not write it out all live
+## Takeaways
+### 🏠 **Home Screen**
+
+- ✅ Reduce visual clutter (especially pre-order status and canteen hours)
+- ✅ Make **“today’s meals” more visible without needing to scroll**
+- ✅ Consider shrinking or repositioning the **language switch + canteen status**
+### 🍽️ **Menu / Pre-order Flow**
+
+- ✅ Rename **“Orders” tab** → something like **“My Orders”** to avoid confusion with “placing” an order
+- ✅ Add **brief instruction text** to “Weekly Menu” screen
+- ✅ Consider **visual hierarchy improvement** for portion/container/special instructions
+
+
+### ⚠️ **Allergen Flow**
+
+- ✅ Clearly **separate “your allergens” from “add new allergen”**
+- ✅ Add a visible **“X” icon to delete** saved allergens
+- ✅ Consider **replacing tag-like style** to reduce selection confusion 
+
+### 💬 **Feedback Feature**
+
+- ✅ Make feedback feature more visible (e.g. button on Home or in a Help section)
+- ✅ Consider **attaching feedback to specific meals** (especially for packaging complaints)
+- ✅ Avoid burying it under profile if scroll is required
+
+### 🧠 General UX
+
+- ✅ Popups/dialogs: simplify or reduce where possible
+- ✅ If time allows: add basic onboarding or tooltips for first-time users
+- ✅ Optional: allow **batch pre-ordering** (future iteration)

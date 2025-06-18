@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen App - Profile Screen</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <!-- Top Bar -->
         <header class="top-bar">
             <div class="status-container">
-                <div class="canteen-status">
-                    <p>[Status]</p>
+                <div class="canteen-status closed">
+                    <div class="status-dot"></div>
+                    <p>Canteen: <span>Closed</span></p>
                 </div>
                 <div class="opening-hours">
-                    <p>[Hours]</p>
+                    <div class="hours-icon"><i class="far fa-clock"></i></div>
+                    <p><span>8:00 - 18:00</span></p>
                 </div>
                 <div class="language-selector">
-                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        EN/DA
+                    </button>
                 </div>
             </div>
         </header>
@@ -27,7 +32,7 @@
         <main class="main-content">
             <!-- User Profile Section -->
             <section class="profile-header">
-                <h1 class="profile-name">[User Name]</h1>
+                <h1 class="profile-name">Signe Holm</h1>
             </section>
             
             <!-- Sustainability Stats Section -->
@@ -36,11 +41,11 @@
                 <div class="stats-container">
                     <div class="stat-item">
                         <span class="stat-label">CO₂ saved this month:</span>
-                        <span class="stat-value">[CO₂ Amount]</span>
+                        <span class="stat-value">3.7 kg <i class="fas fa-seedling" style="color: var(--primary-color);"></i></span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">Containers brought:</span>
-                        <span class="stat-value">[Container Count]</span>
+                        <span class="stat-value">8 <i class="fas fa-box" style="color: #64B5F6;"></i></span>
                     </div>
                 </div>
             </section>
@@ -52,9 +57,9 @@
                     <div class="preference-item">
                         <span class="preference-label">Meal Preference:</span>
                         <div class="preference-options">
-                            <span class="preference-option selected">[Preference 1]</span>
-                            <span class="preference-option">[Preference 2]</span>
-                            <span class="preference-option">[Preference 3]</span>
+                            <span class="preference-option selected">Vegetarian</span>
+                            <span class="preference-option">Vegan</span>
+                            <span class="preference-option">Meat</span>
                         </div>
                     </div>
                 </div>
@@ -82,18 +87,23 @@
                 <h2>Payment Methods</h2>
                 <div class="payment-container">
                     <div class="payment-item">
-                        <div class="payment-icon">[Payment Icon]</div>
-                        <div class="payment-details">
-                            <div class="payment-name">[Payment Method 1]</div>
-                            <div class="payment-number">[Payment Details]</div>
+                        <div class="payment-icon">
+                            <div style="position: relative; width: 30px; height: 20px;">
+                                <div style="position: absolute; left: 0; width: 20px; height: 20px; background-color: #EB001B; border-radius: 50%;"></div>
+                                <div style="position: absolute; right: 0; width: 20px; height: 20px; background-color: #FF5F00; border-radius: 50%; opacity: 0.8;"></div>
+                            </div>
                         </div>
-                        <div class="payment-default">[Default]</div>
+                        <div class="payment-details">
+                            <div class="payment-name">Mastercard</div>
+                            <div class="payment-number">**** **** **** 5678</div>
+                        </div>
+                        <div class="payment-default">Default</div>
                     </div>
                     <div class="payment-item">
-                        <div class="payment-icon">[Payment Icon]</div>
+                        <div class="payment-icon"><i class="fas fa-mobile-alt" style="font-size: 24px; color: #5A78FF;"></i></div>
                         <div class="payment-details">
-                            <div class="payment-name">[Payment Method 2]</div>
-                            <div class="payment-number">[Payment Details]</div>
+                            <div class="payment-name">MobilePay</div>
+                            <div class="payment-number">+45 **** 4321</div>
                         </div>
                     </div>
                     <button class="add-payment-button">+ Add Payment Method</button>
@@ -112,19 +122,19 @@
         <nav class="bottom-nav">
             <ul>
                 <li class="nav-item active">
-                    <div class="nav-icon">P</div>
+                    <div class="nav-icon"><i class="fas fa-user"></i></div>
                     <div class="nav-label">Profile</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">O</div>
+                    <div class="nav-icon"><i class="fas fa-receipt"></i></div>
                     <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">M</div>
+                    <div class="nav-icon"><i class="fas fa-utensils"></i></div>
                     <div class="nav-label">Menu</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">H</div>
+                    <div class="nav-icon"><i class="fas fa-home"></i></div>
                     <div class="nav-label">Home</div>
                 </li>
             </ul>

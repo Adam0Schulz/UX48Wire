@@ -10,6 +10,8 @@
     --button-bg-color: #444444;
     --button-text-color: #e0e0e0;
     --hover-bg-color: #2a2a2a;
+    --primary-color: #66BB6A; /* Primary green color */
+    --primary-color-hover: #81C784; /* Lighter green for hover */
 }
 
 /* Reset and base styles */
@@ -54,13 +56,59 @@ body {
 
 .canteen-status, .opening-hours {
     background-color: var(--section-bg-color);
-    padding: 5px 8px;
-    border: 1px dashed var(--border-color);
-    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     font-size: 12px;
-    text-align: center;
+    display: flex;
+    align-items: center;
     flex: 1;
-    margin-right: 5px;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.canteen-status p, .opening-hours p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.canteen-status span, .opening-hours span {
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.canteen-status.open .status-dot {
+    background-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+.canteen-status.closed .status-dot {
+    background-color: #F44336;
+    box-shadow: 0 0 5px #F44336;
+}
+
+.canteen-status.open span {
+    color: #4CAF50;
+}
+
+.canteen-status.closed span {
+    color: #F44336;
+}
+
+.hours-icon {
+    color: #64B5F6;
+    margin-right: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .language-selector {
@@ -69,14 +117,31 @@ body {
 }
 
 .lang-toggle {
-    background-color: var(--button-bg-color);
-    color: var(--button-text-color);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 5px 8px;
-    font-size: 12px;
+    background-color: var(--primary-color);
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.lang-toggle:hover {
+    background-color: var(--primary-color-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.lang-toggle:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Feedback Button */
@@ -264,8 +329,9 @@ body {
 }
 
 .allergen-item.selected {
-    background-color: var(--button-bg-color);
-    border: 1px solid var(--border-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: #000000;
     font-weight: bold;
 }
 
@@ -394,6 +460,8 @@ body {
     display: flex;
     list-style: none;
     justify-content: space-around;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item {
@@ -402,6 +470,7 @@ body {
     align-items: center;
     width: 25%;
     text-align: center;
+    cursor: pointer;
 }
 
 .nav-icon {
@@ -421,8 +490,9 @@ body {
 }
 
 .nav-item.active .nav-icon {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: var(--primary-color);
+    color: #000000;
+    border: none;
 }
 
 .nav-item.active .nav-label {

@@ -10,25 +10,27 @@
     <div class="app-container">
         <!-- Top Bar -->
         <header class="top-bar">
-            <div class="language-selector">
-                <button class="lang-toggle" aria-label="Switch language">EN | DA</button>
-            </div>
             <div class="status-container">
                 <div class="canteen-status">
-                    <p>Canteen Status: [Status]</p>
+                    <p>[Status]</p>
                 </div>
                 <div class="opening-hours">
-                    <p>Opening Hours: [Hours]</p>
+                    <p>[Hours]</p>
+                </div>
+                <div class="language-selector">
+                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
                 </div>
             </div>
         </header>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Weekly Menu Section -->
-            <section class="weekly-menu">
+            <div class="section-title">
                 <h1>Weekly Menu</h1>
-                
+                <p class="intro-text">Browse the weekly menu and pre-order today's meals to skip the line at pickup.</p>
+            </div>
+            
+            <section class="weekly-menu">
                 <div class="week-container">
                     <!-- Monday -->
                     <div class="day-section">
@@ -308,6 +310,11 @@
             </section>
         </main>
 
+        <!-- Feedback Button -->
+        <div class="feedback-btn">
+            <span>?</span>
+        </div>
+
         <!-- Bottom Navigation -->
         <nav class="bottom-nav">
             <ul>
@@ -317,7 +324,7 @@
                 </li>
                 <li class="nav-item">
                     <div class="nav-icon">O</div>
-                    <div class="nav-label">Order</div>
+                    <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item active">
                     <div class="nav-icon">M</div>
@@ -332,5 +339,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="../js/navigation.js"></script>
 </body>
 </html>

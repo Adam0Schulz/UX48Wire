@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen App - Pre-order Screen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,14 +12,18 @@
         <!-- Top Bar -->
         <header class="top-bar">
             <div class="status-container">
-                <div class="canteen-status">
-                    <p>[Status]</p>
+                <div class="canteen-status closed">
+                    <div class="status-dot"></div>
+                    <p>Canteen: <span>Closed</span></p>
                 </div>
                 <div class="opening-hours">
-                    <p>[Hours]</p>
+                    <div class="hours-icon"><i class="far fa-clock"></i></div>
+                    <p><span>8:00 - 18:00</span></p>
                 </div>
                 <div class="language-selector">
-                    <button class="lang-toggle" aria-label="Switch language">EN/DA</button>
+                    <button class="lang-toggle" aria-label="Switch language">
+                        EN/DA
+                    </button>
                 </div>
             </div>
         </header>
@@ -33,13 +38,17 @@
             <!-- Pre-order Form -->
             <section class="preorder-form">
                 <div class="meal-preview">
-                    <div class="meal-image-placeholder">[Meal Image]</div>
+                    <div class="meal-image-container">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Quinoa Buddha Bowl" class="meal-image">
+                    </div>
                     <div class="meal-info">
-                        <h1 class="meal-title">[Meal Name]</h1>
+                        <h1 class="meal-title">Quinoa Buddha Bowl</h1>
                         <div class="meal-badges">
-                            <span class="badge">[Dietary Type]</span>
+                            <span class="badge vegan-badge">Vegan</span>
+                            <span class="badge organic-badge">Organic</span>
+                            <span class="badge local-badge">Local</span>
                         </div>
-                        <div class="meal-price">[Price]</div>
+                        <div class="meal-price">45 DKK</div>
                     </div>
                 </div>
                 
@@ -50,22 +59,22 @@
                         <div class="option-item">
                             <input type="radio" id="portion1" name="portion" value="portion1">
                             <label for="portion1">
-                                <span class="option-name">[Portion Option 1]</span>
-                                <span class="option-price">[Price 1]</span>
+                                <span class="option-name">Small (350g)</span>
+                                <span class="option-price">35 DKK</span>
                             </label>
                         </div>
                         <div class="option-item">
                             <input type="radio" id="portion2" name="portion" value="portion2" checked>
                             <label for="portion2">
-                                <span class="option-name">[Portion Option 2]</span>
-                                <span class="option-price">[Price 2]</span>
+                                <span class="option-name">Regular (500g)</span>
+                                <span class="option-price">45 DKK</span>
                             </label>
                         </div>
                         <div class="option-item">
                             <input type="radio" id="portion3" name="portion" value="portion3">
                             <label for="portion3">
-                                <span class="option-name">[Portion Option 3]</span>
-                                <span class="option-price">[Price 3]</span>
+                                <span class="option-name">Large (650g)</span>
+                                <span class="option-price">55 DKK</span>
                             </label>
                         </div>
                     </div>
@@ -78,24 +87,22 @@
                         <div class="option-item">
                             <input type="radio" id="container1" name="container" value="container1" checked>
                             <label for="container1">
-                                <span class="option-name">[Container Option 1]</span>
-                                <span class="option-description">[Description 1]</span>
+                                <span class="option-name">Eat in (plate)</span>
                             </label>
                         </div>
                         <div class="option-item">
                             <input type="radio" id="container2" name="container" value="container2">
                             <label for="container2">
-                                <span class="option-name">[Container Option 2]</span>
-                                <span class="option-description">[Description 2]</span>
-                                <span class="eco-badge">[Eco]</span>
+                                <span class="option-name">Bring Your Own Container</span>
+                                <span class="eco-badge">Eco</span>
                             </label>
                         </div>
                         <div class="option-item">
                             <input type="radio" id="container3" name="container" value="container3">
                             <label for="container3">
-                                <span class="option-name">[Container Option 3]</span>
-                                <span class="option-description">[Additional Fee]</span>
-                            </label>
+                                <span class="option-name">Takeaway box</span>
+                                <span class="option-price">+10 DKK</span>
+                           </label>
                         </div>
                     </div>
                 </div>
@@ -111,11 +118,11 @@
                     <h2>Pickup Time</h2>
                     <div class="time-selector">
                         <select class="time-dropdown">
-                            <option value="time1">[Time Option 1]</option>
-                            <option value="time2">[Time Option 2]</option>
-                            <option value="time3" selected>[Time Option 3]</option>
-                            <option value="time4">[Time Option 4]</option>
-                            <option value="time5">[Time Option 5]</option>
+                            <option value="time1">11:30</option>
+                            <option value="time2">12:00</option>
+                            <option value="time3" selected>12:30</option>
+                            <option value="time4">13:00</option>
+                            <option value="time5">13:30</option>
                         </select>
                     </div>
                 </div>
@@ -134,19 +141,19 @@
         <nav class="bottom-nav">
             <ul>
                 <li class="nav-item">
-                    <div class="nav-icon">P</div>
+                    <div class="nav-icon"><i class="fas fa-user"></i></div>
                     <div class="nav-label">Profile</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">O</div>
+                    <div class="nav-icon"><i class="fas fa-receipt"></i></div>
                     <div class="nav-label">My Orders</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">M</div>
+                    <div class="nav-icon"><i class="fas fa-utensils"></i></div>
                     <div class="nav-label">Menu</div>
                 </li>
                 <li class="nav-item">
-                    <div class="nav-icon">H</div>
+                    <div class="nav-icon"><i class="fas fa-home"></i></div>
                     <div class="nav-label">Home</div>
                 </li>
             </ul>
